@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Order Food Online</title>
+	{% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static 'order/clockpicker/dist/bootstrap-clockpicker.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'order/bootstrap/css/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{% static 'order/fontawesome/css/all.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'order/style.css' %}">
+</head>
+<body>
+	<div class="container">
+		<div class="menu">
+			<h1 class="menu__heading">menu</h1>
+			<p class="menu__notification alert alert-primary">
+				<i>Please tick one from the choices provided</i>
+			</p>
+
+			<form class="menu__form" action="">
+				<h3 class="menu__meal-of-the-day">breakfast menu</h3>
+
+				<div class="input-group clockpicker" data-placement="left" data-align="top" data-autoclose="true">
+					<input type="text" class="form-control" placeholder="Breakfast Time">
+					<div class="input-group-addon">
+				    	<button class="btn btn-outline-secondary" type="button"><i class="fas fa-bell"></i></button>
+				  	</div>
+				</div>
+
+				<ol class="menu__breakfast-list">
+					<li class="menu__item">Bread with Butter</li>
+					<li class="menu__item">Honey and labneh, zatar Croissant</li>
+					<li class="menu__item">Danish Pastry, Fruit Juice, Mineral Water</li>
+					<li class="menu__item">Fried eggs and Foul modammes</li>
+				</ol>
+ 				<textarea class="form-control" id="validationTextarea" placeholder="Please leave a comment"></textarea>
+				<br>
+
+
+				<h3 class="menu__meal-of-the-day">lunch menu choices</h3>
+				<div class="input-group clockpicker" data-placement="left" data-align="top" data-autoclose="true">
+					<input type="text" class="form-control" placeholder="Lunch Time">
+					<div class="input-group-addon">
+				    	<button class="btn btn-outline-secondary" type="button"><i class="fas fa-bell"></i></button>
+				  	</div>
+				</div>
+
+				<h4 class="menu__starter">starter</h4>
+				<div class="custom-control custom-checkbox">
+				  	<input type="checkbox" class="custom-control-input" id="lunchStarter1">
+				  	<label class="custom-control-label" for="lunchStarter1">mexicana salad</label>
+				</div>
+
+				<div class="custom-control custom-checkbox">
+					<input type="checkbox" class="custom-control-input" id="lunchStarter2">
+				  	<label class="custom-control-label" for="lunchStarter2">tomato basil salad</label>
+				</div>
+
+				<div class="custom-control custom-checkbox">
+				  	<input type="checkbox" class="custom-control-input" id="lunchStarter3">
+				  	<label class="custom-control-label" for="lunchStarter3">cream of potato leek soup</label>
+				</div>
+
+
+				<h4 class="menu__starter">Main Course</h4>
+				<div class="custom-control custom-checkbox">
+				  	<input type="checkbox" class="custom-control-input" id="lunchMain1">
+				  	<label class="custom-control-label" for="lunchMain1">shrimp biryani</label>
+				</div>
+
+				<div class="custom-control custom-checkbox">
+					<input type="checkbox" class="custom-control-input" id="lunchMain2">
+				  	<label class="custom-control-label" for="lunchMain2">chicken escallop with french fries</label>
+				</div>
+
+				<div class="custom-control custom-checkbox">
+				  	<input type="checkbox" class="custom-control-input" id="lunchMain3">
+				  	<label class="custom-control-label" for="lunchMain3">beef piccata with caponata</label>
+				</div>
+
+				<h4 class="menu__starter">Dessert</h4>
+				<div class="custom-control custom-checkbox">
+				  	<input type="checkbox" class="custom-control-input" id="lunchDessert1">
+				  	<label class="custom-control-label" for="lunchDessert1">fresh fruit platter</label>
+				</div>
+
+				<div class="custom-control custom-checkbox">
+					<input type="checkbox" class="custom-control-input" id="lunchDessert2">
+				  	<label class="custom-control-label" for="lunchDessert2">apple crumble</label>
+				</div>
+
+			    <textarea class="form-control" id="validationTextarea" placeholder="Please leave a comment"></textarea>
+				<br>
+
+				<h3 class="menu__meal-of-the-day">dinner menu choices</h3>
+				<div class="input-group clockpicker" data-placement="left" data-align="top" data-autoclose="true">
+					<input type="text" class="form-control" placeholder="Dinner Time">
+					<div class="input-group-addon">
+				    	<button class="btn btn-outline-secondary" type="button"><i class="fas fa-bell"></i></button>
+				  	</div>
+				</div>
+
+				<h4 class="menu__starter">starter</h4>
+				<div class="custom-control custom-checkbox">
+				  	<input type="checkbox" class="custom-control-input" id="dinnerStarter1">
+				  	<label class="custom-control-label" for="dinnerStarter1">cream of carrot and ginger</label>
+				</div>
+
+				<div class="custom-control custom-checkbox">
+					<input type="checkbox" class="custom-control-input" id="dinnerStarter2">
+				  	<label class="custom-control-label" for="dinnerStarter2">salad russain</label>
+				</div>
+
+				<div class="custom-control custom-checkbox">
+				  	<input type="checkbox" class="custom-control-input" id="dinnerStarter3">
+				  	<label class="custom-control-label" for="dinnerStarter3">cold mezzar platter</label>
+				</div>
+
+				<h4 class="menu__starter">Main Course</h4>
+				<div class="custom-control custom-checkbox">
+				  	<input type="checkbox" class="custom-control-input" id="dinnerMain1">
+				  	<label class="custom-control-label" for="dinnerMain1">lamb machbous</label>
+				</div>
+
+				<div class="custom-control custom-checkbox">
+					<input type="checkbox" class="custom-control-input" id="dinnerMain2">
+				  	<label class="custom-control-label" for="dinnerMain2">seafood pasta</label>
+				</div>
+
+				<div class="custom-control custom-checkbox">
+				  	<input type="checkbox" class="custom-control-input" id="dinnerMain3">
+				  	<label class="custom-control-label" for="dinnerMain3">buttered chicken with steam rice</label>
+				</div>
+
+				<h4 class="menu__starter">Dessert</h4>
+				<div class="custom-control custom-checkbox">
+				  	<input type="checkbox" class="custom-control-input" id="dinnerDessert1">
+				  	<label class="custom-control-label" for="dinnerDessert1">fruits (papaya and pineapple)</label>
+				</div>
+
+				<div class="custom-control custom-checkbox">
+					<input type="checkbox" class="custom-control-input" id="dinnerDessert2">
+				  	<label class="custom-control-label" for="dinnerDessert2">Bassbousa</label>
+				</div>
+
+			    <textarea class="form-control" id="validationTextarea" placeholder="Please leave a comment"></textarea>
+				<br>
+
+ 				<button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
+			</form>
+		</div>
+	</div>
+	<script src="{% static 'order/clockpicker/assets/js/jquery.min.js' %}" type="text/javascript"></script>
+	<script src="{% static 'order/clockpicker/assets/js/bootstrap.min.js' %}" type="text/javascript"></script>
+	<script src="{% static 'order/clockpicker/dist/bootstrap-clockpicker.js' %}" type="text/javascript"></script>
+	<script type="text/javascript">
+		$('.clockpicker').clockpicker({
+		    placement: 'bottom',
+		    align: 'left',
+		    donetext: 'Done'
+		});
+	</script>
+</body>
+</html>
