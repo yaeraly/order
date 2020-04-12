@@ -13,6 +13,11 @@
 <body>
 	<div class="container">
 		<div class="menu">
+			{% if user.is_authenticated %}
+				<div class="menu__list">
+					<a href="{% url 'order:logout_view' %}">Log Out</a>
+				</div>
+			{% endif %}
 			<h1 class="menu__heading">menu</h1>
 			<p class="menu__notification alert alert-primary">
 				<i>Please tick one from the choices provided</i>

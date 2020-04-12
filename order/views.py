@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import Week, Menu, Food, Starter, MainCourse, Dessert
 from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 from django.contrib import messages
 
@@ -10,6 +10,10 @@ def index(request):
 
 def login(request):
     return render(request, 'registration/login.html')
+
+def logout_view(request):
+    logout(request)
+    return redirect('/')
 
 def register(request):
     if request.method == 'POST':
