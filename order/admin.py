@@ -3,7 +3,7 @@ from .models import Week, Menu, Food, Starter, MainCourse, Dessert
 
 class MenuInline(admin.StackedInline):
     model = Menu
-    extra = 1
+    extra = 7
 
 class FoodInline(admin.StackedInline):
     model = Food

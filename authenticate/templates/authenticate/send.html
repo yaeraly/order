@@ -1,0 +1,10 @@
+<form class="" action="{% url 'authenticate:receive' %}" method="post">
+  {% csrf_token %}
+  <input type="radio" id="male" name="gender" value="male">
+  <label for="male">Male</label><br>
+  <input type="radio" id="female" name="gender" value="female">
+  <label for="female">Female</label><br>
+  <input type="radio" id="others" name="gender" value="others">
+  <label for="others">Others</label><br>
+  <input type="submit" name="" value="Submit">
+</form>

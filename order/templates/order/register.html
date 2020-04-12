@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Food Online</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'order/bootstrap/css/bootstrap.min.css' %}">
+    <script src="{% static 'order/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div style="margin-top: 50px;" class="mainbox col-lg-6 offset-md-3 col-md-8 offset-sm-2">
+        <div class="card card-inverse card-info">
+
+            <div class="card-header">
+                <div class="card-title">Sign Up</div>
+                <div style="float: right; font-size: 85%; position: relative; top: -10px;">
+                  <a href="{% url 'order:login' %}">Sign In</a>
+                </div>
+            </div>
+
+            <div class="card-block">
+                <form method="post" action="#">
+                    {% csrf_token %}
+                    <div style="display: none;" class="alert alert-danger">
+                        <p>Error:</p> <span></span>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-lg-9">
+                            <input type="text" class="form-control" name="firstname" placeholder="Your Name"
+                            />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-lg-9">
+                            <input type="username" class="form-control" name="username" placeholder="Username"
+                            />
+                            {% for message in messages %}
+                              {% if is_login_taken %}
+                                <span class="alert-danger">{{ message }}</span>
+                              {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-lg-9">
+                            <input type="password" class="form-control" name="password1" placeholder="Password"
+                            />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-lg-9">
+                          <input type="password" class="form-control" name="password2" placeholder="Repeat Password"
+                        />
+                        {% for message in messages %}
+                          <span class="alert-danger">{{ message }}</span>
+                        {% endfor %}
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                      <div class="form-group input-group col-lg-9">
+                    		  <select class="form-control" name="floor">
+                    			     <option selected="">Select Your Floor</option>
+                               <option>Floor 2 - Kitchen</option>
+                    			     <option>Floor 4</option>
+                    			     <option>Floor 5</option>
+                    			     <option>Floor 6</option>
+                               <option>Floor 7</option>
+                    			     <option>Floor 8</option>
+                    			     <option>Floor 9</option>
+                               <option>Floor 10</option>
+                    			     <option>Floor 11</option>
+                    			     <option>Floor 12</option>
+                               <option>Floor 13</option>
+                    			     <option>Floor 14</option>
+                    			     <option>Floor 15</option>
+                    			     <option>Floor 16</option>
+                    			     <option>Floor 17</option>
+                               <option>Floor 18</option>
+                    		  </select>
+                  	  </div>
+                    </div>
+
+                    <div class="form-group">
+                        <!-- Button -->
+                        <div class="offset-md-3 col-lg-9">
+                            <button type="submit" value="Register" class="btn btn-info">Sign Up</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+	     </div>
+	</div>
+</body>
+</html>
